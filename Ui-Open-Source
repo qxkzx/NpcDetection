@@ -14,9 +14,9 @@ return (function()
     local Lib = {}
     
     --// (CONFIG & OPTIONS) //--
-    Lib.Options = {} -- Armazena objetos dos componentes para controle externo
-    Lib.Flags = {}   -- Armazena valores para Save/Load
-    Lib.ThemeRegistry = {} -- Armazena objetos visuais para troca de tema em tempo real
+    Lib.Options = {} 
+    Lib.Flags = {}   
+    Lib.ThemeRegistry = {} 
     
     local ConfigFolder = "Private/Configs"
     local CurrentConfig = "default"
