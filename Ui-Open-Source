@@ -1,3 +1,5 @@
+
+
 return (function()
     --// SERVICES //--
     local TweenService = game:GetService("TweenService")
@@ -152,7 +154,7 @@ return (function()
     function Lib:SaveConfig(Name)
         if not writefile then return end
         local Data = HttpService:JSONEncode(Lib.Flags)
-        if not isfolder("GustavoHub") then makefolder("GustavoHub") end
+        if not isfolder("Private") then makefolder("Private") end
         if not isfolder(ConfigFolder) then makefolder(ConfigFolder) end
         writefile(ConfigFolder .. "/" .. Name .. ".json", Data)
     end
@@ -213,7 +215,7 @@ return (function()
         MakeDraggable(MainWin, Topbar)
         
         -- Controls (Search, Close, Open)
-        local CloseBtn = CreateInstance("ImageButton", {Parent=Topbar, BackgroundTransparency=1, Position=UDim2.new(1,-30,0,4), Size=UDim2.new(0,26,0,26), Image="rbxassetid://6031094678", ImageColor3=Color3.fromRGB(255,60,60)})
+        local CloseBtn = CreateInstance("ImageButton", {Parent=Topbar, BackgroundTransparency=1, Position=UDim2.new(1,-30,0,4), Size=UDim2.new(0,26,0,26), Image="rbxassetid://6031094678", ImageColor3=Color3.fromRGB(206, 206, 206)})
         local SearchBtn = CreateInstance("ImageButton", {Parent=Topbar, BackgroundTransparency=1, Position=UDim2.new(1,-60,0,4), Size=UDim2.new(0,26,0,26), Image="rbxassetid://6031154871", ImageColor3=Color3.fromRGB(200,200,200)})
         
         local OpenBtn = CreateInstance("ImageButton", {Parent=ScreenGui, Visible=false, BackgroundColor3=UIConfig.SecondaryColor, Position=UDim2.new(0,20,0.5,0), Size=UDim2.new(0,45,0,45), AutoButtonColor=false, BackgroundTransparency=0.2})
